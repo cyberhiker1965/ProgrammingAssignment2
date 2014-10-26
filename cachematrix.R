@@ -34,9 +34,10 @@ cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   mat <- x$getinverse()
   # check to see if the matrix is cached and is a match to x
-  if (!is.null(mat) && is.matrix(x) && is.matrix(mat) && 
-        dim(x) == dim(mat) && all(x == mat)) {
-          message("getting cached data")
+##  if (!is.null(mat) && is.matrix(x) && is.matrix(mat) && 
+##        dim(x) == dim(mat) && all(x == mat)) {
+    if (!is.null(mat) ) {
+      message("getting cached data")
           return(mat)
   }
   data <- x$get()
